@@ -135,7 +135,8 @@
 	#before-sleep 'swaylock -f -c 000000'
 
 #--- НАСТРОЙКИ МОНИТОРОВ --------------------------------------------------------------
-	#output HDMI-A-1 resolution 1920x1080 position 1920,0
+	output eDP-1 resolution 1920x1080 position 320,1440
+	output HDMI-A-1 resolution 2560x1440 position 0,0
 
 	workspace 1 output HDMI-A-1
 	workspace 2 output HDMI-A-1
