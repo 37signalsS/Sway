@@ -68,7 +68,7 @@ sudo systemctl enable --now powertop.service
 ```
 
 ### Git
-Add to .gitconfig in home directory
+Add to .gitconfig in your home directory
 ```
 [core]
     pager = delta
