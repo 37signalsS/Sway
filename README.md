@@ -26,7 +26,7 @@ sudo pacman -U <имя_файла>
 
 flatpak install flathub app.freelens.Freelens
 ```
-### Nvim
+### Neovim
 ```
 export EDITOR=nvim
 ```
