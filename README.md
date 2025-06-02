@@ -1,6 +1,6 @@
 # Sway Catppuccin 
 
-![](/Pictures/21:19 02.06.2024.png)
+![](/Pictures/21:19 02.06.2025.png)
 
 ## Installation
 
@@ -10,19 +10,19 @@ git clone https://github.com/37signalsS/sway.git
 ```
 Copy all files to `~/.config`
 
-## Software Installation
+## Software installation
 
-### Core Packages
+### Pacman packages
 ```
 sudo pacman -S swaybg gammastep swaylock swappy xorg-xwayland wl-clipboard cliphist autotiling nwg-look wlroots xdg-user-dirs slurp grim swaync waybar wofi xdg-desktop-portal-wlr telegram-desktop nemo ghostty libreoffice tailscale yazi haruna pavucontrol obs-studio gthumb htop bat fd zoxide fzf micro fish wireguard-tools gvfs jq unzip p7zip fastfetch cmus docker docker-compose polkit-gnome thefuck kolourpaint keepassxc libreoffice-still-ru virtualbox scrcpy android-tools eza git-delta atuin lazygit bluez bluez-utils blueman syncthing yt-dlp fragments kdeconnect network-manager-applet nm-connection-editor power-profiles-daemon dive translate-shell flatpak zed linux-zen linux-zen-headers
 ```
 
-### AUR Packages 
+### AUR packages 
 ```
 yay -S discord-canary vesktop zen-browser-bin onlyoffice-bin youtube-music-bin lens-bin lazydocker pomatez ttf-times-new-roman vscodium-bin ungoogled-chromium-bin termius
 ```
 
-### Additional Software
+### Additional software
 - [Warp Terminal](https://app.warp.dev/get_warp)
   ```
   sudo pacman -U ./<filename>.pkg.tar.zst
@@ -30,7 +30,7 @@ yay -S discord-canary vesktop zen-browser-bin onlyoffice-bin youtube-music-bin l
   
 - [WaveTerm](https://www.waveterm.dev/download)
   ```
-  sudo pacman -U <filename>
+  sudo pacman -U <filename>.pacman
   ```
   
 - FreeLens (via Flatpak)
@@ -58,12 +58,12 @@ Set `restoreWindows` to `none` in settings.
    chsh -s /usr/bin/fish
    ```
 
-### Rofi Configuration
+### Rofi 
 To remove specific applications from appearing in Rofi, delete their `.desktop` files from:
 - `~/.local/share/applications`
 - `/usr/share/applications`
 
-### Default Applications
+### Default applications
 1. View system MIME types:
 
    ```
@@ -103,13 +103,13 @@ To remove specific applications from appearing in Rofi, delete their `.desktop` 
    update-mime-database ~/.local/share/mime
    ```
 
-### Discord Update Skipping
+### Discord update skipping
 Add to `~/.config/discord/settings.json`:
 ```
 {"SKIP_HOST_UPDATE": true}
 ```
 
-## Power Saving (ThinkPad Specific)
+## Power saving (ThinkPad specific)
 ```
 sudo pacman -S tlp tlp-rdw powertop tp_smapi acpi_call
 sudo systemctl mask systemd-rfkill.service && sudo systemctl mask systemd-rfkill.socket
@@ -143,7 +143,7 @@ sudo systemctl enable --now tlp.service
 sudo systemctl enable --now powertop.service
 ```
 
-## System Information
+## System information
 
 | Component       | Details                                                                 |
 |-----------------|-------------------------------------------------------------------------|
