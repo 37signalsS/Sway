@@ -30,6 +30,10 @@ flatpak install flathub app.freelens.Freelens
 ```
 export EDITOR=nvim
 ```
+### Vscode
+```
+restoreWindows => none
+```
 ### Terminal
 ```
 curl -sS https://starship.rs/install.sh | sh

@@ -1,0 +1,174 @@
+#--- КЛАВИША МОДИФИКАТОР --------------------------------------------------------------
+	set $mod Mod4
+
+#--- ПЕРЕМЕННЫЕ -----------------------------------------------------------------------
+	#set $term ghostty
+	#set $menu wofi --show drun
+
+#--- ПОВЕДЕНИЕ ПРИЛОЖЕНИЙ -------------------------------------------------------------
+	# Автозапуск
+	exec autotiling
+	exec waybar -c /home/q/notebook/config.jsonc
+	exec zen-browser
+	exec zeditor
+	exec nm-applet
+	exec gammastep -PO 4000 
+	exec /usr/bin/wl-paste --watch /usr/bin/cliphist store
+	exec swaync -c /home/q/.config/swaync/config.jsonc
+	exec XDG_CURRENT_DESKTOP=gnome telegram-desktop
+	exec /usr/bin/kdeconnectd
+
+	# Запуск на определенном воркспейсе
+	assign [app_id="blueman"] workspace 9
+	assign [app_id="zen"] workspace 1
+	assign [app_id="dev.zed.Zed"] workspace 3
+	assign [app_id="org.telegram.desktop"] workspace 2
+	assign [class="pomatez"] workspace 9
+	assign [class="KeePassXC"] workspace 9
+	
+	# Запуск в фокусе
+	for_window [class="pomatez"] focus
+	
+	# Запуск в плавающем режиме
+	for_window [app_id="org.pulseaudio.pavucontrol"] floating enable, border none, resize set 600px 400px, move right 820px, move up 485px
+
+#--- ДЕКОРАЦИИ ОКОН -------------------------------------------------------------------
+
+	gaps inner 10
+	gaps outer 10
+	smart_gaps on
+
+	# Толщина рамок для обычных и плавающих окон
+	default_border pixel 0
+	default_floating_border pixel 0
+
+	# Размер рамок окон
+	for_window [tiling] border pixel 0
+	for_window [floating] border none
+
+	# Отключение рамки если открыто одно окно
+	smart_borders on
+
+#--- УКРАШАТЕЛЬСТВА -------------------------------------------------------------------
+#	exec swaybg -m fill -i "$(find ~/Wallpaper -type f \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.jpeg' \) | shuf -n 1)"
+    output * bg ~/Wallpaper/anime-nix-wallpaper.png fill
+	# Шрифт (по ходу для заголовков)
+	font pango:MononokiNerdFont 10
+
+	seat seat0 xcursor_theme "Bibata-Modern-Ice"
+	exec_always gsettings set org.gnome.desktop.interface cursor-theme "Bibata-Modern-Ice"
+
+	set $gnome-schema org.gnome.desktop.interface
+	exec_always {
+#			Отключение кнопок управления окном
+			gsettings set org.gnome.desktop.wm.preferences button-layout ''
+	}
+
+	client.focused			#ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2
+	client.focused_inactive		#282828 #282828 #282828 #282828
+	client.unfocused		#282828 #282828 #282828 #282828
+	client.urgent			#282828 #282828 #282828 #282828
+	client.placeholder		#282828 #282828 #282828 #282828
+
+#--- РАСКЛАДКА КЛАВИАТУРЫ -------------------------------------------------------------
+	input * {
+		xkb_layout us,ru
+		xkb_options grp:caps_toggle
+	}
+
+#--- НАСТРОЙКА ТАЧПАДА ----------------------------------------------------------------
+	input "1739:52837:VEN_06CB:00_06CB:CE65_Touchpad" {
+	pointer_accel 0.5
+	dwt enabled
+	tap enabled
+	natural_scroll disable
+	middle_emulation enabled
+	}
+
+#--- НАСТРОЙКИ МОНИТОРОВ --------------------------------------------------------------
+	
+    workspace 1 output eDP-1
+	workspace 2 output eDP-1
+	workspace 3 output eDP-1
+	workspace 4 output eDP-1
+	workspace 5 output eDP-1
+	workspace 7 output eDP-1
+	workspace 8 output eDP-1
+	workspace 9 output eDP-1
+
+#--- ХОТКЕИ ---------------------------------------------------------------------------
+
+	bindsym --to-code $mod+Return exec ghostty
+	bindsym --to-code $mod+o exec obs
+	bindsym --to-code $mod+n exec nemo
+	bindsym --to-code $mod+w exec waveterm
+	bindsym --to-code $mod+i exec inkscape
+	bindsym --to-code $mod+b exec blender
+	bindsym --to-code $mod+r exec reaper
+	bindsym --to-code $mod+d exec wofi --show drun --height 400 --width 600 --hide-scroll
+	bindsym --to-code $mod+c exec cliphist list | wofi --dmenu | cliphist decode | wl-copy
+    bindsym --to-code $mod+space exec /home/q/.config/waybar/scripts/windows.sh
+
+	bindsym --to-code $mod+Ctrl+r exec reboot
+	bindsym --to-code $mod+Ctrl+p exec poweroff
+
+	bindsym --to-code $mod+a exec /home/q/.config/waybar/scripts/screenshots.sh
+
+	bindsym --to-code $mod+q kill
+
+	floating_modifier $mod normal
+
+	bindsym --to-code $mod+Shift+r reload
+
+	bindsym --to-code $mod+Shift+q exec swaynag -t warning -m 'Покеда кожанный' -B 'Yes, exit sway' 'swaymsg exit'
+
+	bindsym --to-code $mod+Left focus left
+	bindsym --to-code $mod+Down focus down
+	bindsym --to-code $mod+Up focus up
+	bindsym --to-code $mod+Right focus right
+
+	bindsym --to-code $mod+Shift+Left move left
+	bindsym --to-code $mod+Shift+Down move down
+	bindsym --to-code $mod+Shift+Up move up
+	bindsym --to-code $mod+Shift+Right move right
+
+	bindsym --to-code $mod+1 workspace number 1
+	bindsym --to-code $mod+2 workspace number 2
+	bindsym --to-code $mod+3 workspace number 3
+	bindsym --to-code $mod+4 workspace number 4
+	bindsym --to-code $mod+5 workspace number 5
+	bindsym --to-code $mod+6 workspace number 6
+	bindsym --to-code $mod+7 workspace number 7
+	bindsym --to-code $mod+8 workspace number 8
+	bindsym --to-code $mod+9 workspace number 9
+	bindsym --to-code $mod+0 workspace number 10
+
+	bindsym --to-code $mod+Shift+1 move container to workspace number 1
+	bindsym --to-code $mod+Shift+2 move container to workspace number 2
+	bindsym --to-code $mod+Shift+3 move container to workspace number 3
+	bindsym --to-code $mod+Shift+4 move container to workspace number 4
+	bindsym --to-code $mod+Shift+5 move container to workspace number 5
+	bindsym --to-code $mod+Shift+6 move container to workspace number 6
+	bindsym --to-code $mod+Shift+7 move container to workspace number 7
+	bindsym --to-code $mod+Shift+8 move container to workspace number 8
+	bindsym --to-code $mod+Shift+9 move container to workspace number 9
+	bindsym --to-code $mod+Shift+0 move container to workspace number 10
+
+	bindsym --to-code $mod+f fullscreen
+
+	bindsym --to-code $mod+s floating toggle
+
+	bindsym --to-code $mod+Shift+w mode "resize"
+
+	mode "resize" {
+	bindsym Left resize shrink width 10px
+	bindsym Down resize grow height 10px
+	bindsym Up resize shrink height 10px
+	bindsym Right resize grow width 10px
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+	}
+
+#--- ПОДКЛЮЧЕНИЕ ВСЕХ ФАЙЛОВ ИЗ ДИРЕКТОРИИ С ДЕФОЛТНЫМ КОНФИГОМ -----------------------
+	include /etc/sway/config.d/*
