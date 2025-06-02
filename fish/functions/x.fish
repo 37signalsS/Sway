@@ -5,6 +5,6 @@ function x
         xdg-open "$selected_file"
         exit
     else
-        echo "Файл не выбран."
+        echo "File not select"
     end
 end

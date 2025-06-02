@@ -6,7 +6,7 @@
 @define-color text-color-alt @foreground;
 @define-color text-color-disabled rgba(150, 150, 150, 0.8);
 * {
-    font-family: "Mononoki Nerd Font";
+    font-family: "MononokiNerdFont";
     font-weight: bold;
 }
 
@@ -58,13 +58,11 @@
     border: none
 }
 
-
 .notification-action {
     border: 1px solid @noti-border-color;
     border-top: none;
     border-radius: 10px;
 }
-
 
 .notification-default-action:hover,
 .notification-action:hover {

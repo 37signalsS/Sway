@@ -8,7 +8,17 @@ Clone this repository:
 ```
 git clone https://github.com/37signalsS/sway.git
 ```
-Copy all files to `~/.config`
+```
+mkdir .config/sway
+```
+```
+cp /etc/sway/config ~/.config/sway
+```
+Replace the terminal emulator specified in the default configuration file with the one that is in the system
+```
+micro ~/.config/sway/config
+```
+Copy files to `~/.config`
 
 ## Software installation
 

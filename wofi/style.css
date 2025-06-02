@@ -16,7 +16,6 @@ window {
     background-color: @fg;
 }
 
-
 #inner-box {
     margin: 5px;
     background-color: @bg;
