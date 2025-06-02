@@ -1,6 +1,6 @@
 # Sway Catppuccin 
 
-![](/Pictures/21:19 02.06.2025.png)
+![](/Pictures/21:19_02.06.2025.png)
 
 ## Installation
 
