@@ -20,7 +20,7 @@ assign [app_id="zen"] workspace 1
 assign [app_id="dev.zed.Zed"] workspace 7
 assign [app_id="org.telegram.desktop"] workspace 8
 assign [class="pomatez"] workspace 9
-assign [class="KeePassXC"] workspace 9
+assign [app_id="org.keepassxc.KeePassXC"] workspace 9
 
 # Focus window on launch
 for_window [class="pomatez"] focus

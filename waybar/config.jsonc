@@ -7,7 +7,7 @@
   "output": "HDMI-A-1",
 
   "modules-left": ["custom/menu", "sway/workspaces"],
-  "modules-center": ["custom/bt_battery", "battery", "custom/swaync", "custom/cpu", "custom/memory"],
+  "modules-center": ["custom/bt_battery", "battery", "custom/swaync", "custom/cpu", "custom/memory",  "custom/disk"],
   "modules-right": ["tray", "pulseaudio", "sway/language", "clock", "custom/power"],
 
   "custom/swaync": {
@@ -80,7 +80,7 @@
     "format-icons": {
       "default": ["", "", ""]
     },
-    "on-click": "pkill pavucontrol; pavucontrol",
+    "on-click": "~/.config/waybar/scripts/toggle-mute.sh",
     "tooltip": false
   },
 
@@ -117,7 +117,13 @@
     "format": " {}",
     "tooltip": false
   },
-
+  
+  "custom/disk": {
+    "format": " {}",
+    "exec": "df -h / | awk 'NR==2{print $5}'",
+    "interval": 60
+  },
+  
   "battery": {
   	//"interval": 5,
   	"align": 0,
