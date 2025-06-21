@@ -9,14 +9,14 @@ exec nm-applet
 exec gammastep -PO 4000 
 exec /usr/bin/wl-paste --watch /usr/bin/cliphist store
 exec swaync -c /home/q/.config/swaync/config.jsonc
-exec XDG_CURRENT_DESKTOP=gnome telegram-desktop
+exec Telegram
 exec /usr/bin/kdeconnectd
 
 # Launch applications on specific workspaces
 assign [app_id="blueman"] workspace 9
 assign [app_id="zen"] workspace 1
-assign [app_id="dev.zed.Zed"] workspace 3
-assign [app_id="org.telegram.desktop"] workspace 2
+#assign [app_id="dev.zed.Zed"] workspace 3
+#assign [app_id="org.telegram.desktop"] workspace 2
 assign [class="pomatez"] workspace 9
 assign [class="KeePassXC"] workspace 9
 
@@ -25,6 +25,8 @@ for_window [class="pomatez"] focus
 
 # Launch in floating mode 
 for_window [app_id="org.pulseaudio.pavucontrol"] floating enable, border none, resize set 600px 400px, move right 820px, move up 485px
+for_window [app_id="dev.zed.Zed"] move to workspace 3
+for_window [app_id="org.telegram.desktop"] move to workspace 2
 
 # Window gaps
 gaps inner 10
