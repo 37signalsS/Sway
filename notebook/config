@@ -99,7 +99,7 @@ bindsym --to-code $mod+w exec waveterm
 bindsym --to-code $mod+i exec inkscape
 bindsym --to-code $mod+b exec blender
 bindsym --to-code $mod+r exec reaper
-bindsym --to-code $mod+d exec wofi --show drun --height 400 --width 600 --hide-scroll
+bindsym --to-code $mod+d exec ./power.sh
 bindsym --to-code $mod+c exec cliphist list | wofi --dmenu | cliphist decode | wl-copy
 bindsym --to-code $mod+space exec /home/q/.config/waybar/scripts/windows.sh
 bindsym --to-code $mod+a exec /home/q/.config/waybar/scripts/screenshots.sh
