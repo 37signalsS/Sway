@@ -92,7 +92,7 @@
 
   "custom/power": {
     "format": "⏻ ",
-    "on-click": "~/.config/wofi/power.sh",
+    "on-click": "~/notebook/power.sh",
     "escape": true,
     "tooltip": false
   },
