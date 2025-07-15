@@ -1,7 +1,5 @@
 # Sway Catppuccin 
 
-![](/Pictures/21:19_02.06.2025.png)
-
 ## Installation
 
 Clone this repository:
@@ -33,6 +31,12 @@ yay -S discord-canary vesktop zen-browser-bin onlyoffice-bin youtube-music-bin l
 ```
 
 ### Additional software
+- [Chaotic-AUR](https://aur.chaotic.cx/docs)
+
+- [Anki](https://apps.ankiweb.net/)
+
+- [arch-cleaner](https://github.com/antonio-foti/arch-cleaner)
+
 - [Warp Terminal](https://app.warp.dev/get_warp)
   ```
   sudo pacman -U ./<filename>.pkg.tar.zst
