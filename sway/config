@@ -4,7 +4,7 @@ set $mod Mod4
 exec autotiling
 exec waybar
 exec zen-browser
-exec zeditor
+exec vscodium
 exec nm-applet
 exec gammastep -PO 4000 
 exec pomatez
@@ -27,7 +27,7 @@ for_window [class="pomatez"] focus
 
 # Launch in floating mode 
 for_window [app_id="org.pulseaudio.pavucontrol"] floating enable, border none, resize set 600px 400px, move right 820px, move up 485px
-for_window [app_id="dev.zed.Zed"] move to workspace 7
+for_window [class="VSCodium"] move to workspace 7
 for_window [app_id="org.telegram.desktop"] move to workspace 8
 
 # Window gaps
