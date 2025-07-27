@@ -1,5 +1,7 @@
 # Sway Catppuccin 
 
+![](/Pictures/21:19_02.06.2025.png)
+
 ## Installation
 
 Clone this repository:
