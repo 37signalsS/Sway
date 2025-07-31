@@ -4,7 +4,7 @@ set $mod Mod4
 exec autotiling
 exec waybar -c /home/q/notebook/config.jsonc
 exec zen-browser
-exec zeditor
+exec vscodium
 exec nm-applet
 exec gammastep -PO 4000 
 exec /usr/bin/wl-paste --watch /usr/bin/cliphist store
@@ -25,7 +25,7 @@ for_window [class="pomatez"] focus
 
 # Launch in floating mode 
 for_window [app_id="org.pulseaudio.pavucontrol"] floating enable, border none, resize set 600px 400px, move right 820px, move up 485px
-for_window [app_id="dev.zed.Zed"] move to workspace 3
+for_window [class="VSCodium"] move to workspace 3
 for_window [app_id="org.telegram.desktop"] move to workspace 2
 
 # Window gaps
@@ -46,7 +46,7 @@ smart_borders on
 
 # Set a random wallpaper from the folder
 #exec swaybg -m fill -i "$(find ~/Wallpaper -type f \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.jpeg' \) | shuf -n 1)"
-output * bg ~/Wallpaper/anime-nix-wallpaper.png fill
+output * bg ~/Wallpaper/wallhaven-w5o6pq.jpg fill
 
 # Font (likely for window titles)
 font pango:MononokiNerdFont 10
