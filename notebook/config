@@ -22,6 +22,7 @@ assign [class="KeePassXC"] workspace 9
 
 # Focus window on launch
 for_window [class="pomatez"] focus
+for_window [class="VSCodium"] focus
 
 # Launch in floating mode 
 for_window [app_id="org.pulseaudio.pavucontrol"] floating enable, border none, resize set 600px 400px, move right 820px, move up 485px
