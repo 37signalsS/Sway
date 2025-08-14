@@ -24,12 +24,12 @@ Copy files to `~/.config`
 
 ### Pacman packages
 ```
-sudo pacman -S swaybg gammastep swaylock swappy xorg-xwayland wl-clipboard cliphist autotiling nwg-look wlroots xdg-user-dirs slurp grim swaync waybar wofi xdg-desktop-portal-wlr telegram-desktop nemo ghostty libreoffice tailscale yazi haruna pavucontrol obs-studio gthumb htop bat fd ripgrep-all zoxide fzf micro fish wireguard-tools gvfs jq unzip p7zip fastfetch docker docker-compose polkit-gnome thefuck krita keepassxc libreoffice-still-ru virtualbox scrcpy android-tools eza git-delta atuin lazygit bluez bluez-utils blueman syncthing yt-dlp fragments kdeconnect network-manager-applet nm-connection-editor power-profiles-daemon dive trash-cli translate-shell flatpak zed linux-zen linux-zen-headers
+sudo pacman -S swaybg gammastep swaylock swappy xorg-xwayland wl-clipboard cliphist autotiling nwg-look wlroots xdg-user-dirs slurp grim swaync waybar wofi xdg-desktop-portal-wlr telegram-desktop nemo ghostty libreoffice tailscale yazi haruna pavucontrol obs-studio gthumb htop bat fd ripgrep-all zoxide fzf micro fish wireguard-tools gvfs jq unzip p7zip fastfetch docker docker-compose polkit-gnome thefuck krita keepassxc libreoffice-still-ru virtualbox scrcpy android-tools eza git-delta atuin lazygit bluez bluez-utils blueman syncthing yt-dlp fragments kdeconnect network-manager-applet nm-connection-editor power-profiles-daemon dive trash-cli translate-shell flatpak zed linux-zen linux-zen-headers firefox
 ```
 
 ### AUR packages 
 ```
-yay -S discord-canary vesktop zen-browser-bin onlyoffice-bin youtube-music-bin lens-bin lazydocker pomatez ttf-times-new-roman vscodium-bin ungoogled-chromium-bin termius archarchive
+yay -S onlyoffice-bin lens-bin lazydocker pomatez ttf-times-new-roman vscodium-bin ungoogled-chromium-bin archarchive phoenix-arch
 ```
 
 ### Additional software
