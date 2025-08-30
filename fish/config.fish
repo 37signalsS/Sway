@@ -1,3 +1,5 @@
+# set -Ux GOOGLE_CLOUD_PROJECT "_"
+
 if status is-interactive
 
 set -g fish_greeting
@@ -22,7 +24,7 @@ alias vpnoff='sudo systemctl stop tailscaled && sleep 3 && sudo tailscale down'
 
 alias l='eza --tree --icons=always --long --git -a'
 
-alias s='sway -c /home/q/notebook/config'
+alias s='niri -c /home/q/notebook1/niri/config.kdl'
 
 alias d="sudo -v; cd (sudo find / -type d 2>/dev/null | fzf --preview 'tree -C {}' --preview-window=right:50%)"
 

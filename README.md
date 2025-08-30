@@ -166,7 +166,7 @@ sudo systemctl enable --now powertop.service
 | Distribution    | [EndeavourOS](https://endeavouros.com/)                                 |
 | Window Manager  | [Sway](https://github.com/swaywm/sway)                                  |
 | Status Bar      | [Waybar](https://github.com/Alexays/Waybar)                             |
-| Application Launcher | [Wofi](https://man.archlinux.org/man/wofi.1)                        |
+| Application Launcher | [Wofi](https://man.archlinux.org/man/wofi)                        |
 | Terminal        | [Ghostty](https://ghostty.org/)                                         |
 | Shell           | [Fish](https://fishshell.com/)                                          |
 | Icon Theme      | [WhiteSur icon theme](https://www.gnome-look.org/p/1405756)             |

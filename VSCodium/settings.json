@@ -4,12 +4,12 @@
     "editor.fontSize": 17,
 
     // Установить иконки и настроить их
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "catppuccin noctis icons",
     "material-icon-theme.hidesExplorerArrows": true,
     "workbench.tree.indent": 14,
 
     // Установить тему по дефолту
-    "workbench.colorTheme": "Dracula Theme Soft",
+    "workbench.colorTheme": "Dracula Theme",
 
     // Отсчет строчки относительно текущего курсора
     "editor.lineNumbers": "relative",
@@ -76,4 +76,13 @@
     "git.enableSmartCommit": true,
     "redhat.telemetry.enabled": true,
     "workbench.activityBar.location": "hidden",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "catppuccin-noctis-icons.hidesExplorerArrows": false,
+    "vim.handleKeys": {
+        "<C-d>": false
+    }
 }

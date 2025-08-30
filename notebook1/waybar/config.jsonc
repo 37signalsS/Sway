@@ -1,0 +1,155 @@
+{
+  "height": 35,
+  "width": 1400,
+  "spacing": 10,
+  "margin-top": 15,
+  "reload_style_on_change": true,
+  "output": "eDP-1",
+
+  "modules-left": ["custom/menu", "sway/workspaces"],
+  "modules-center": ["custom/bt_battery", "battery", "custom/swaync", "custom/cpu", "custom/memory",  "custom/disk"],
+  "modules-right": ["tray", "pulseaudio", "custom/niri-layout", "clock", "custom/power"],
+
+  "custom/swaync": {
+    "tooltip": true,
+    "tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
+      "format": " {}",
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": " {:%H:%M}",
+    "format-alt": " {:%H:%M:%S   %Y, %d %B, %A}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "locale": "ru_RU.UTF-8",
+      "mode": "year",
+      "mode-mon-col": 3,
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+
+  "custom/menu": {
+    "format": "󰣇",
+    "on-click": "pkill wofi; wofi --show drun -x 40 -y 10 --height 500 --width 400 --hide-scroll",
+    "escape": true,
+    "tooltip": false
+  },
+
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "urgent": "",
+      "active": "",
+      "default": ""
+    }
+  },
+
+  "tray": {
+    "icon-size": 20,
+    "spacing": 10,
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "scroll-step": 5,
+    "format": "<span color='#cdd6f4'>{icon}</span> {volume}%",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "on-click": "~/.config/waybar/scripts/toggle-mute.sh",
+    "tooltip": false
+  },
+
+  "custom/niri-layout": {
+    "exec": "/home/q/.config/waybar/scripts/niri-layout.sh",
+    "interval": 1,
+    "format": "󰌌 {}",
+    "tooltip": false
+  },
+
+  "custom/power": {
+    "format": "⏻ ",
+    "on-click": "~/notebook1/power.sh",
+    "escape": true,
+    "tooltip": false
+  },
+
+  "custom/bt_battery": {
+    "exec": "/home/q/.config/waybar/scripts/bt.sh",
+    "interval": 1,
+    "format": "󰂯 {}%",
+    "tooltip": false
+  },
+
+  "custom/cpu": {
+    "exec": "/home/q/.config/waybar/scripts/cpu.sh",
+    "interval": 1,
+    "format": "{}",
+    "tooltip": false
+  },
+
+  "custom/memory": {
+    "exec": "/home/q/.config/waybar/scripts/memory.sh",
+    "interval": 1,
+    "format": " {}",
+    "tooltip": false
+  },
+  
+  "custom/disk": {
+    "format": " {}",
+    "exec": "df -h / | awk 'NR==2{print $5}'",
+    "interval": 60
+  },
+  
+  "battery": {
+  	//"interval": 5,
+  	"align": 0,
+  	"rotate": 0,
+  	//"bat": "BAT1",
+  	//"adapter": "ACAD",
+  	"full-at": 100,
+  	"design-capacity": false,
+  	"states": {
+  		"good": 95,
+  		"warning": 30,
+  		"critical": 15
+  	},
+  	"format": "{icon} {capacity}%",
+  	"format-charging": " {capacity}%",
+  	"format-plugged": "󱘖 {capacity}%",
+  	"format-alt-click": "click",
+  	"format-full": "{icon} Full",
+  	"format-alt": "{icon} {time}",
+  	"format-icons": [
+  		"󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+  	],
+  	"format-time": "{H}h {M}min",
+  	"tooltip": true,
+  	"tooltip-format": "{timeTo} {power}w"
+  }
+}
