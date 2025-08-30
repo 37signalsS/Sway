@@ -169,7 +169,7 @@ sudo systemctl enable --now powertop.service
 | Application Launcher | [Wofi](https://man.archlinux.org/man/wofi)                        |
 | Terminal        | [Ghostty](https://ghostty.org/)                                         |
 | Shell           | [Fish](https://fishshell.com/)                                          |
-| Icon Theme      | [WhiteSur icon theme](https://www.gnome-look.org/p/1405756)             |
+| Icon Theme      | [Tela icon theme](https://www.gnome-look.org/p/1279924/)             |
 | GTK3 Theme      | [Catppuccin GTK Theme](https://www.gnome-look.org/p/1715554)            |
 | Cursor Theme    | [Bibata Modern Ice](https://www.gnome-look.org/p/1197198)               |
 | Font            | [BlexMono](https://www.nerdfonts.com/font-downloads)          |
