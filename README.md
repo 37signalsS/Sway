@@ -172,7 +172,7 @@ sudo systemctl enable --now powertop.service
 | Icon Theme      | [WhiteSur icon theme](https://www.gnome-look.org/p/1405756)             |
 | GTK3 Theme      | [Catppuccin GTK Theme](https://www.gnome-look.org/p/1715554)            |
 | Cursor Theme    | [Bibata Modern Ice](https://www.gnome-look.org/p/1197198)               |
-| Font            | [Mononoki Nerd Font](https://www.nerdfonts.com/font-downloads)          |
+| Font            | [BlexMono](https://www.nerdfonts.com/font-downloads)          |
 
 ## Contact
 
